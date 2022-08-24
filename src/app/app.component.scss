@@ -11,8 +11,14 @@ nav {
     list-style: none;
     display: flex;
     li {
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin-left: 1em;
+    }
+  }
+  @media (max-width: 280px) {
+    background-color: red;
+    color: red;
+    img {
+      display: none;
     }
   }
 }
