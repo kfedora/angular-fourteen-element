@@ -84,7 +84,7 @@ CREATE src/app/hello-world/hello-world.component.ts (295 bytes)
 UPDATE src/app/app.module.ts (493 bytes)
 ```
 
-```
+```bash
 $ time yarn add @angular/elements
 yarn add v1.22.19
 [1/4] Resolving packages...
@@ -103,4 +103,128 @@ Done in 7.34s.
 real    0m7.723s
 user    0m7.422s
 sys     0m3.276s
+```
+
+```bash
+$ time yarn run build
+yarn run v1.22.19
+$ ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial Chunk Files           | Names         |  Raw Size | Estimated Transfer Size
+main.b2007b777af788a0.js      | main          | 192.52 kB |                52.26 kB
+polyfills.396fc25c62aea290.js | polyfills     |  33.10 kB |                10.66 kB
+runtime.38b573fc43a98118.js   | runtime       |   1.07 kB |               607 bytes
+styles.ef46db3751d8e999.css   | styles        |   0 bytes |                       -
+
+                              | Initial Total | 226.68 kB |                63.51 kB
+
+Build at: 2022-08-24T13:44:58.107Z - Hash: ee1f146c513429ea - Time: 13542ms
+Done in 15.84s.
+
+real    0m16.138s
+user    0m28.344s
+sys     0m1.160s
+```
+
+```bash
+$ time yarn run bundle
+yarn run v1.22.19
+$ ng build --output-hashing none
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial Chunk Files | Names         |  Raw Size | Estimated Transfer Size
+main.js             | main          | 192.52 kB |                52.26 kB
+polyfills.js        | polyfills     |  33.10 kB |                10.66 kB
+runtime.js          | runtime       |   1.07 kB |               607 bytes
+styles.css          | styles        |   0 bytes |                       -
+
+                    | Initial Total | 226.68 kB |                63.51 kB
+
+Build at: 2022-08-24T13:49:22.445Z - Hash: ee1f146c513429ea - Time: 9626ms
+Done in 11.62s.
+
+real    0m11.770s
+user    0m21.177s
+sys     0m1.051s
+```
+
+```
+$ time yarn add concat
+yarn add v1.22.19
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ concat@1.0.3
+info All dependencies
+└─ concat@1.0.3
+Done in 3.29s.
+
+real    0m3.489s
+user    0m3.926s
+sys     0m1.339s
+```
+
+```
+time node ./concat.js
+
+real    0m0.078s
+user    0m0.052s
+sys     0m0.027s
+```
+
+```
+$ time yarn run bundle
+yarn run v1.22.19
+$ ng build --output-hashing none && node ./concat.js
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial Chunk Files | Names         |  Raw Size | Estimated Transfer Size
+main.js             | main          | 192.52 kB |                52.26 kB
+polyfills.js        | polyfills     |  33.10 kB |                10.66 kB
+runtime.js          | runtime       |   1.07 kB |               607 bytes
+styles.css          | styles        |   0 bytes |                       -
+
+                    | Initial Total | 226.68 kB |                63.51 kB
+
+Build at: 2022-08-24T14:03:54.706Z - Hash: ee1f146c513429ea - Time: 4155ms
+Done in 6.16s.
+
+real    0m6.342s
+user    0m9.221s
+sys     0m0.562s
+```
+
+```
+$ time yarn run bundle
+yarn run v1.22.19
+$ ng build --output-hashing none && node ./concat.js
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial Chunk Files | Names         |  Raw Size | Estimated Transfer Size
+main.js             | main          | 192.52 kB |                52.26 kB
+polyfills.js        | polyfills     |  33.10 kB |                10.66 kB
+runtime.js          | runtime       |   1.07 kB |               607 bytes
+styles.css          | styles        |   0 bytes |                       -
+
+                    | Initial Total | 226.68 kB |                63.51 kB
+
+Build at: 2022-08-24T14:03:54.706Z - Hash: ee1f146c513429ea - Time: 4155ms
+Done in 6.16s.
+
+real    0m6.342s
+user    0m9.221s
+sys     0m0.562s
 ```

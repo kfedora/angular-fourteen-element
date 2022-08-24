@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,14 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [],
+  entryComponents: [HelloWorldComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector){}
+
+  ngDoBootstrap() {
+    const helloWorldElement = createCustomElement(HelloWorldComponent, { injector: this.injector });
+    customElements.define("app-hello-world", helloWorldElement);
+  }
+}
