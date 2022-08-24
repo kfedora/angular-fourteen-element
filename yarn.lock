@@ -188,6 +188,13 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/elements@^14.1.3":
+  version "14.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/elements/-/elements-14.1.3.tgz#fa1dc9b0ea570597d4826a786ed1c8c5e0fb7f7d"
+  integrity sha512-1NiHa98+TWpnVoLUyYI0KEChJ+jK8tybmGKqswemBHcHVsXwcRvWI8v2gQTHeebpbpYZVK2epDLRi73L2SeDpA==
+  dependencies:
+    tslib "^2.3.0"
+
 "@angular/forms@^14.1.0":
   version "14.1.3"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-14.1.3.tgz#b89a7431711dcc826f6dbd7555561ca0803babfe"

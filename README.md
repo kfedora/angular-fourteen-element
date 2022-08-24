@@ -84,3 +84,23 @@ CREATE src/app/hello-world/hello-world.component.ts (295 bytes)
 UPDATE src/app/app.module.ts (493 bytes)
 ```
 
+```
+$ time yarn add @angular/elements
+yarn add v1.22.19
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ @angular/elements@14.1.3
+info All dependencies
+└─ @angular/elements@14.1.3
+Done in 7.34s.
+
+real    0m7.723s
+user    0m7.422s
+sys     0m3.276s
+```
