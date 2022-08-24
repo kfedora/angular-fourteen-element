@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angularfourteenelement';
+  georgeWashington = "George~Washington~1732~2~22~Virginia~1799~12~14~Virginia";
+  barackObama = "Barack~Obama~1961~8~4~Hawaii"
 }

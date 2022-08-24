@@ -1,0 +1,12 @@
+nav {
+  border: 2px solid red;
+  text-decoration: none;
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}

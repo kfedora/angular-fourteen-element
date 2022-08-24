@@ -1,0 +1,7 @@
+<p>
+  Hello, {{firstName}} {{lastName}}. You were born on {{dateOfBirth | date:"shortDate"}} in {{placeOfBirth}}.
+</p>
+
+<p *ngIf="!isAlive">
+  Unfortunately, you died on {{dateOfDeath| date:"shortDate"}} in {{placeOfDeath}}.
+</p>

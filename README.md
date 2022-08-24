@@ -73,3 +73,14 @@ real	0m36.994s
 user	0m18.252s
 sys	0m8.823s
 ```
+
+
+```bash
+ng generate component HelloWorld
+CREATE src/app/hello-world/hello-world.component.scss (0 bytes)
+CREATE src/app/hello-world/hello-world.component.html (26 bytes)
+CREATE src/app/hello-world/hello-world.component.spec.ts (628 bytes)
+CREATE src/app/hello-world/hello-world.component.ts (295 bytes)
+UPDATE src/app/app.module.ts (493 bytes)
+```
+
