@@ -1,6 +1,12 @@
 nav {
   border: 2px solid red;
   text-decoration: none;
+  display: flex;
+  img {
+    width: 2em;
+    height: 2em;
+    border: 1px dashed green;
+  }
   ul {
     list-style: none;
     display: flex;
